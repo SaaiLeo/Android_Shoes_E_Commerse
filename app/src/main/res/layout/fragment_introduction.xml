@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/nikeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:src="@drawable/nike_text"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineBottomTexture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTopTexture"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/introShoe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/intro_shoe"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineBottomTexture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTopTexture"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/tvWelcomeText"
+        style="@style/h4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_text"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/introShoe"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="@+id/introShoe"
+        app:layout_constraintTop_toBottomOf="@+id/introShoe" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        style="@style/h2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvDescription"
+        android:textAlignment="center"
+        android:paddingHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/introShoe"
+        app:layout_constraintTop_toBottomOf="@+id/tvWelcomeText"
+        app:layout_constraintEnd_toEndOf="@+id/introShoe"/>
+    
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="@dimen/smallButtonWidth"
+        android:layout_height="@dimen/smallButtonHeight"
+        style="@style/blueButtonStyle"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescription"
+        app:layout_constraintStart_toStartOf="@id/tvDescription"
+        app:layout_constraintEnd_toEndOf="@id/tvDescription"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Start"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTopTexture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottomTexture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50" />
+</androidx.constraintlayout.widget.ConstraintLayout>
