@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Shoes</string>
+    <string name="welcome_text">All the Shoes\nYou'll Ever Need</string>
+    <string name="tvDescription">Discover shoes for daily wear, work, sports, and special moments, all in one simple app designed for everyone.</string>
 </resources>
